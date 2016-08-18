@@ -1,0 +1,41 @@
+body {
+  background-color: #157C9B;
+  font-family: Verdana, sans-serif;
+}
+
+h1 {
+  color: yellow;
+  text-align: center;
+}
+
+fieldset {
+  width: 25%;
+  margin: auto;
+  border-color: yellow;
+  border-radius: 10px 25px;
+  padding: 1%;
+}
+
+label {
+  font-size: large;
+  font-weight: 600;
+  color: white;
+}
+
+legend {
+  color: #A0F7F7;    
+}
+
+input {
+  display: block;
+  float: right;
+  clear: right;
+  text-align: right;
+  }
+
+textarea{
+  display: block;
+  float: right;
+  clear: right;
+  text-align: left;
+}

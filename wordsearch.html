@@ -14,15 +14,18 @@
 </head>
 
 <body>
-    <h1>Spelling Word Wordsearch Generator</h1>
-    
-    
-    
-<?php
-
-
-	
-?>
+    <h1>Spelling Word Wordsearch Generator</h1><br><br>
+    <form action="wordsearch.php" method="post">
+		<fieldset>
+			<legend>Create your Wordsearch</legend>
+			<label>Name of Puzzle:</label> <input type="text" name="puzzleName" required><br>
+			<label>Number of Columns:</label> <input type="text" name="cols" value="12" size="4" required><br>
+			<label>Number of Rows:</label> <input type="text" name="rows" value="12" size="4" required><br>
+			<label>Enter Search Terms:</label><br>
+			<textarea rows="15" cols="25" name="spellingWords">Insert one word per line.</textarea>
+			<input type="submit" value="Create Wordsearch">
+		</fieldset>
+	</form>
     
   
 </body>
