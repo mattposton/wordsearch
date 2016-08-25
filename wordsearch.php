@@ -96,7 +96,7 @@ MESSAGE;
 			$keepGoing = TRUE;
 			
 			while($keepGoing){
-				$dir = rand(0,3);
+				$dir = rand(1,2); //adjusted variable to only pull E or S options.
 				$result = addWord($word[$counter], $direction[$dir]);
 				if ($result == FALSE){
 					$keepGoing = FALSE;
@@ -139,24 +139,24 @@ MESSAGE;
 					}
 					break;
 				
-				case "W":
-					$newCol = rand(strlen($theWord), $puzzleData["width"] -1);
-					$newRow = rand(0, $puzzleData["height"] -1);
-					
-					for ($i = 0; $i < strlen($theWord); $i++){
-						$boardLetter = $board[$newRow][$newCol - $i];
-						$wordLetter = substr($theWord, $i, 1);
-						
-						if (($boardLetter == $wordLetter) || ($boardLetter == ".")){
-							
-							$board[$newRow][$newCol - $i] = $wordLetter;
-						
-						} else {
-							
-							$itWorked = FALSE;
-						}
-					}
-					break;
+				//case "W":
+				//	$newCol = rand(strlen($theWord), $puzzleData["width"] -1);
+				//	$newRow = rand(0, $puzzleData["height"] -1);
+				//	
+				//	for ($i = 0; $i < strlen($theWord); $i++){
+				//		$boardLetter = $board[$newRow][$newCol - $i];
+				//		$wordLetter = substr($theWord, $i, 1);
+				//		
+				//		if (($boardLetter == $wordLetter) || ($boardLetter == ".")){
+				//			
+				//			$board[$newRow][$newCol - $i] = $wordLetter;
+				//		
+				//		} else {
+				//			
+				//			$itWorked = FALSE;
+				//		}
+				//	}
+				//	break;
 				
 				case "S":
 					$newCol = rand(0, $puzzleData["width"] -1);
@@ -177,24 +177,24 @@ MESSAGE;
 					}
 					break;
 				
-				case "N":
-					$newCol = rand(0, $puzzleData["width"] -1);
-					$newRow = rand(strlen($theWord), $puzzleData["height"] -1);
-					
-					for ($i=0; $i < strlen($theWord); $i++){
-						$boardLetter = $board[$newRow - $i][$newCol];
-						$wordLetter = substr($theWord, $i, 1);
-						
-						if (($boardLetter == $wordLetter) || ($boardLetter == ".")){
-							
-							$board[$newRow - $i][$newCol] = $wordLetter;
-							
-						} else {
-							
-							$itWorked = FALSE;
-						}
-					}
-					break;
+				//case "N":
+				//	$newCol = rand(0, $puzzleData["width"] -1);
+				//	$newRow = rand(strlen($theWord), $puzzleData["height"] -1);
+				//	
+				//	for ($i=0; $i < strlen($theWord); $i++){
+				//		$boardLetter = $board[$newRow - $i][$newCol];
+				//		$wordLetter = substr($theWord, $i, 1);
+				//		
+				//		if (($boardLetter == $wordLetter) || ($boardLetter == ".")){
+				//			
+				//			$board[$newRow - $i][$newCol] = $wordLetter;
+				//			
+				//		} else {
+				//			
+				//			$itWorked = FALSE;
+				//		}
+				//	}
+				//	break;
 					
 			}
 			return $itWorked;
