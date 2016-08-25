@@ -1,10 +1,10 @@
 body {
-  background-color: #157C9B;
+  background-color: #50514f;
   font-family: Verdana, sans-serif;
 }
 
-h1 {
-  color: yellow;
+h1, h3 {
+  color: #2184FF;
   text-align: center;
 }
 
@@ -32,3 +32,19 @@ input, textarea {
   clear: right;
   text-align: left;
 }
+
+div {
+  color: #2184FF;
+  margin: auto;
+  text-align: center;
+}
+
+table {
+  margin: auto;
+}
+
+ul {
+  text-align: center;
+  color: #2184FF;
+}
+
